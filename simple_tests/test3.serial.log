@@ -1,0 +1,94 @@
+allocate_oids count=24
+config_tmcuart oid=0 rx_pin=gpio9 pull_up=0 tx_pin=gpio8 bit_time=300
+config_buttons oid=12 button_count=1
+config_analog_in oid=13 pin=gpio26
+config_digital_out oid=14 pin=gpio21 value=0 default_value=0 max_duration=60000000
+set_digital_out_pwm_cycle oid=14 cycle_ticks=1200000
+config_digital_out oid=15 pin=gpio17 value=0 default_value=0 max_duration=0
+set_digital_out_pwm_cycle oid=15 cycle_ticks=120000
+config_digital_out oid=16 pin=gpio18 value=0 default_value=1 max_duration=0
+set_digital_out_pwm_cycle oid=16 cycle_ticks=120000
+config_digital_out oid=17 pin=gpio20 value=0 default_value=1 max_duration=0
+set_digital_out_pwm_cycle oid=17 cycle_ticks=120000
+config_neopixel oid=1 pin=gpio24 data_size=3 bit_max_ticks=48 reset_min_ticks=600
+config_stepper oid=2 step_pin=gpio11 dir_pin=gpio10 invert_step=4294967295 step_pulse_ticks=0
+config_digital_out oid=18 pin=gpio12 value=1 default_value=1 max_duration=0
+config_endstop oid=3 pin=gpio4 pull_up=1
+config_trsync oid=4
+config_stepper oid=5 step_pin=gpio6 dir_pin=gpio5 invert_step=4294967295 step_pulse_ticks=0
+config_digital_out oid=19 pin=gpio7 value=1 default_value=1 max_duration=0
+config_endstop oid=6 pin=gpio3 pull_up=1
+config_trsync oid=7
+config_stepper oid=8 step_pin=gpio19 dir_pin=gpio28 invert_step=4294967295 step_pulse_ticks=0
+config_digital_out oid=20 pin=gpio2 value=1 default_value=1 max_duration=0
+config_endstop oid=9 pin=gpio25 pull_up=1
+config_trsync oid=10
+config_analog_in oid=21 pin=gpio27
+config_digital_out oid=22 pin=gpio23 value=0 default_value=0 max_duration=60000000
+set_digital_out_pwm_cycle oid=22 cycle_ticks=1200000
+config_stepper oid=11 step_pin=gpio14 dir_pin=gpio13 invert_step=4294967295 step_pulse_ticks=0
+config_digital_out oid=23 pin=gpio15 value=1 default_value=1 max_duration=0
+finalize_config crc=904798626
+buttons_add oid=12 pos=0 pin=gpio16 pull_up=1
+buttons_query oid=12 clock=13440000 rest_ticks=24000 retransmit_count=50 invert=0
+query_analog_in oid=13 clock=13560000 sample_ticks=12000 sample_count=8 rest_ticks=3600000 min_value=12005 max_value=32303 range_check_count=4
+queue_digital_out oid=14 clock=2400000 on_ticks=0
+queue_digital_out oid=15 clock=2400000 on_ticks=0
+queue_digital_out oid=16 clock=2400000 on_ticks=0
+queue_digital_out oid=17 clock=2400000 on_ticks=0
+query_analog_in oid=21 clock=14520000 sample_ticks=12000 sample_count=8 rest_ticks=3600000 min_value=731 max_value=32303 range_check_count=4
+queue_digital_out oid=22 clock=2400000 on_ticks=0
+set_next_step_dir oid=2 dir=0
+queue_step oid=2 interval=3024495 count=1 add=0
+queue_digital_out oid=18 clock=3000000 on_ticks=0
+queue_step oid=2 interval=17743 count=2 add=-5210
+queue_step oid=2 interval=9738 count=4 add=-915
+queue_step oid=2 interval=6335 count=6 add=-96
+queue_step oid=2 interval=6000 count=976 add=0
+queue_step oid=2 interval=6000 count=1000 add=0
+queue_step oid=2 interval=6000 count=1000 add=0
+neopixel_update oid=1 pos=0 data=b'MMM'
+queue_step oid=2 interval=6000 count=1000 add=0
+queue_step oid=2 interval=6000 count=1000 add=0
+queue_step oid=2 interval=6000 count=1000 add=0
+queue_step oid=2 interval=6000 count=1000 add=0
+queue_step oid=2 interval=6000 count=1000 add=0
+queue_digital_out oid=19 clock=51082000 on_ticks=0
+set_next_step_dir oid=5 dir=0
+queue_step oid=5 interval=51093623 count=1 add=0
+queue_step oid=2 interval=5928 count=5 add=88
+queue_step oid=2 interval=6746 count=4 add=872
+queue_step oid=2 interval=11369 count=2 add=4099
+queue_step oid=5 interval=15093 count=2 add=-3500
+queue_step oid=5 interval=9214 count=5 add=-769
+queue_step oid=5 interval=6024 count=48 add=-1
+queue_step oid=5 interval=6000 count=936 add=0
+queue_step oid=5 interval=6000 count=1000 add=0
+queue_step oid=5 interval=6000 count=1000 add=0
+queue_step oid=5 interval=6000 count=1000 add=0
+queue_step oid=5 interval=6000 count=1000 add=0
+queue_step oid=5 interval=6000 count=1000 add=0
+queue_step oid=5 interval=6000 count=1000 add=0
+queue_step oid=5 interval=6000 count=1000 add=0
+set_next_step_dir oid=2 dir=1
+queue_step oid=2 interval=48087247 count=1 add=0
+queue_step oid=5 interval=6042 count=4 add=493
+queue_step oid=5 interval=8150 count=3 add=1550
+queue_step oid=5 interval=15438 count=1 add=0
+queue_step oid=2 interval=15093 count=2 add=-3500
+queue_step oid=2 interval=9214 count=5 add=-769
+queue_step oid=2 interval=6024 count=48 add=-1
+queue_step oid=2 interval=6000 count=925 add=0
+queue_step oid=2 interval=6000 count=1001 add=0
+queue_step oid=2 interval=6000 count=1000 add=0
+queue_step oid=2 interval=6000 count=1000 add=0
+queue_step oid=2 interval=6000 count=1000 add=0
+queue_step oid=2 interval=6000 count=1000 add=0
+queue_step oid=2 interval=6000 count=999 add=0
+queue_step oid=2 interval=6000 count=1000 add=0
+queue_step oid=2 interval=6026 count=12 add=0
+queue_step oid=2 interval=6363 count=4 add=786
+queue_step oid=2 interval=9847 count=2 add=2686
+queue_step oid=2 interval=17932 count=1 add=0
+queue_digital_out oid=18 clock=148428000 on_ticks=1
+queue_digital_out oid=19 clock=148428000 on_ticks=1

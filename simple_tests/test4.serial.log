@@ -1,0 +1,57 @@
+allocate_oids count=17
+config_stepper oid=0 step_pin=gpio11 dir_pin=gpio10 invert_step=4294967295 step_pulse_ticks=0
+config_digital_out oid=12 pin=gpio12 value=1 default_value=1 max_duration=0
+config_endstop oid=1 pin=gpio4 pull_up=1
+config_trsync oid=2
+config_tmcuart oid=3 rx_pin=gpio9 pull_up=0 tx_pin=gpio8 bit_time=300
+config_stepper oid=4 step_pin=gpio6 dir_pin=gpio5 invert_step=4294967295 step_pulse_ticks=0
+config_digital_out oid=13 pin=gpio7 value=1 default_value=1 max_duration=0
+config_endstop oid=5 pin=gpio3 pull_up=1
+config_trsync oid=6
+config_stepper oid=7 step_pin=gpio19 dir_pin=gpio28 invert_step=4294967295 step_pulse_ticks=0
+config_digital_out oid=14 pin=gpio2 value=1 default_value=1 max_duration=0
+config_endstop oid=8 pin=gpio25 pull_up=1
+config_trsync oid=9
+config_stepper oid=10 step_pin=gpio14 dir_pin=gpio13 invert_step=4294967295 step_pulse_ticks=0
+config_digital_out oid=15 pin=gpio15 value=1 default_value=1 max_duration=0
+config_digital_out oid=16 pin=gpio17 value=0 default_value=0 max_duration=0
+set_digital_out_pwm_cycle oid=16 cycle_ticks=120000
+config_neopixel oid=11 pin=gpio24 data_size=3 bit_max_ticks=48 reset_min_ticks=600
+finalize_config crc=837093480
+queue_digital_out oid=16 clock=2400000 on_ticks=0
+queue_digital_out oid=12 clock=3000000 on_ticks=0
+neopixel_update oid=11 pos=0 data=b'MMM'
+set_next_step_dir oid=0 dir=0
+queue_step oid=0 interval=3060000 count=1 add=0
+queue_step oid=0 interval=43735 count=2 add=-13307
+queue_step oid=0 interval=24301 count=3 add=-2765
+queue_step oid=0 interval=17268 count=4 add=-1063
+queue_step oid=0 interval=13217 count=8 add=-447
+queue_step oid=0 interval=9981 count=10 add=-217
+queue_step oid=0 interval=7978 count=15 add=-109
+queue_step oid=0 interval=6430 count=22 add=-57
+queue_step oid=0 interval=5231 count=32 add=-31
+queue_step oid=0 interval=4309 count=35 add=-19
+queue_step oid=0 interval=3692 count=45 add=-12
+queue_step oid=0 interval=3192 count=53 add=-8
+queue_step oid=0 interval=2810 count=51 add=-6
+queue_step oid=0 interval=2532 count=78 add=-4
+queue_step oid=0 interval=2246 count=78 add=-3
+queue_step oid=0 interval=2030 count=53 add=-1
+queue_step oid=0 interval=2000 count=7064 add=0
+queue_step oid=0 interval=2023 count=66 add=2
+queue_step oid=0 interval=2183 count=74 add=3
+queue_step oid=0 interval=2437 count=59 add=4
+queue_step oid=0 interval=2705 count=57 add=6
+queue_step oid=0 interval=3084 count=47 add=9
+queue_step oid=0 interval=3554 count=37 add=14
+queue_step oid=0 interval=4108 count=33 add=24
+queue_step oid=0 interval=4943 count=25 add=43
+queue_step oid=0 interval=6120 count=16 add=78
+queue_step oid=0 interval=7439 count=13 add=157
+queue_step oid=0 interval=9730 count=7 add=323
+queue_step oid=0 interval=12058 count=6 add=743
+queue_step oid=0 interval=17343 count=3 add=1923
+queue_step oid=0 interval=24459 count=2 add=5969
+queue_step oid=0 interval=43924 count=1 add=0
+queue_digital_out oid=12 clock=22024000 on_ticks=1
